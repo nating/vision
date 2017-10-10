@@ -3,10 +3,10 @@ A repository for Computer Vision projects written in OpenCV.
 
 ## How to Set up your OpenCV environment on Mac
 
-* [Install XCode](https://itunes.apple.com/ie/app/xcode/id497799835?mt=12)
-* [Install CMake](https://cmake.org/download/)
+* <a href="https://itunes.apple.com/ie/app/xcode/id497799835?mt=12" target="_blank">Install XCode</a>
+* <a href="https://cmake.org/download/" target="_blank">Install CMake</a>
 * Download OpenCV:
-  1. [Get the latest release of OpenCV](https://github.com/opencv/opencv/releases)
+  1. <a href="https://github.com/opencv/opencv/releases" target="_blank">Get the latest release of OpenCV</a>
   2. Create a folder called 'build' within the OpenCV folder you downloaded
   3. Open CMake
   4. Select the downloaded folder as the source file
@@ -24,7 +24,7 @@ A repository for Computer Vision projects written in OpenCV.
   2. Make sure that 'Always Search User Paths' is set to 'Yes'.
   3. Add `/usr/local/lib` to 'Framework Search Paths'.
   4. Add `/usr/local/include` to 'Header Search Paths'.
-  5. Add `<The path to your build folder>/lib` to 'Library Search Paths'.
+  5. Add `<The path to the build folder you made>/lib` to 'Library Search Paths'.
 * Search the Build Settings for 'Other Linker Flags' and add every file except the 'cv2.so' from the 'lib' folder now inside your 'build' folder from before. (You can drag and drop these into the 'Other Linker Flags' in XCode)
 
 You can test that you have set up OpenCV correctly by replacing the code in your main.cpp with this code and running it:
