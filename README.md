@@ -3,6 +3,8 @@ A repository for Computer Vision projects written in OpenCV.
 
 ## How to Set up your OpenCV environment on Mac
 
+*Please note: Keep in mind that it matters where your 'build' folder is when you run CMake, and this path is where your build folder's path should point to for eternity.*
+
 * <a href="https://itunes.apple.com/ie/app/xcode/id497799835?mt=12" target="_blank">Install XCode</a>
 * <a href="https://cmake.org/download/" target="_blank">Install CMake</a>
 * Download OpenCV:
