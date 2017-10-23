@@ -79,8 +79,8 @@ In theory, luminance typically ranges from 0 to 1 (usually represented digitally
 
 The **HLS** (Hue-Luminance-Saturation) model is frequently used in computer vision.
 
-This is the formula to convert an RGB image into a HLS image:
-<img src="/Users/GeoffreyNatin/Documents/GithubRepositories/vision/assets/images/rgbtohsl.png" />
+This is the formula to convert an RGB image into a HLS image:  
+<img style='width:300' src="/assets/images/rgbtohsl.png"></img>
 
 ### Image Noise
 
@@ -107,7 +107,7 @@ Different noise reducing techniques are appropriate in different circumstances, 
 Local averaging introduces blurring into images.
 
 A **Rotating Mask** is a nonlinear operator that applies one of nine possible local averaging  filters (such as those below, for example) depending on which image region is most homogeneous.
-<img src="/Users/GeoffreyNatin/Documents/GithubRepositories/vision/assets/images/rotating-mask.png" />
+<img style="width:500" src="/assets/images/rotating-mask.png"></img>
 
 Averaging with a rotating mask is effective at suppressing noise and sharpening the images, but is computationally more expensive than local averaging.
 
