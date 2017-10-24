@@ -80,7 +80,7 @@ In theory, luminance typically ranges from 0 to 1 (usually represented digitally
 The **HLS** (Hue-Luminance-Saturation) model is frequently used in computer vision.
 
 This is the formula to convert an RGB image into a HLS image:  
-<img style='width:300' src="/assets/images/rgbtohsl.png"></img>
+<img width="300px" src="/assets/images/rgbtohsl.png"></img>
 
 ### Image Noise
 
@@ -107,7 +107,7 @@ Different noise reducing techniques are appropriate in different circumstances, 
 Local averaging introduces blurring into images.
 
 A **Rotating Mask** is a nonlinear operator that applies one of nine possible local averaging  filters (such as those below, for example) depending on which image region is most homogeneous.
-<img style="width:500" src="/assets/images/rotating-mask.png"></img>
+<img width="500px" src="/assets/images/rotating-mask.png"></img>
 
 Averaging with a rotating mask is effective at suppressing noise and sharpening the images, but is computationally more expensive than local averaging.
 
@@ -179,7 +179,7 @@ TODO: Write a full explanation of how Otsu Thresholding works
 **Adaptive thresholding** involves separating an image up into sub-images and calculating a threshold for each of the sub-images. The threshold for each point in the image is then calculated by interpolating a threshold value from the four nearest thresholds using bilinear interpolation.
 
 Adaptive thresholding is useful when a global threshold value for the entire image will misclassify pixels as foreground and background. The below example makes this a bit more clear:  
-<img style='width:300' src="/assets/images/global-thresholding.png"></img>
+<img width="500px" src="/assets/images/global-thresholding.png"></img>
 
 OpenCV's' adaptive thresholding algorithm works like how one might initially imaging adaptive threshold would work where a new threshold is being computed for every pixel based on the average of a local region around it.
 
@@ -202,4 +202,4 @@ An **Opening** is an erosion operation followed by a dilation operation with the
 A **Closing** is a dilation operation followed by an erosion operation, again with the same structuring element.
 
 In many applications it is common to see a closing followed by an opening to clean up binary image data. The benefits of this can be seen in the below example:  
-<img style='width:300' src="/assets/images/opening-then-closing.png"></img>
+<img width="500px" src="/assets/images/opening-then-closing.png"></img>
