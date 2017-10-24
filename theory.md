@@ -153,3 +153,53 @@ K-Means Clustering works as follows:
 K-Means Clustering is an example of unsupervised learning.
 
 ---
+
+## Binary vision
+
+A **Binary Image** is one in which there is only a single bit per pixel (i.e. black or white).
+
+A binary image is created from a grayscale image by thresholding.
+
+**Thresholding** involves creating a threshold, and setting all pixel values above the threshold to 1 and all those below to 0.
+
+In hardware, the most efficient way to threshold images is to create a look-up table for all (usually 255) possible values for pixels and use the LUT to set each pixel's value.
+
+Setting thresholds manually can cause errors, as real world lighting sources gradually become weaker over time.
+
+**Bimodal Histogram Analysis** assumes that the background of an image is predominantly centred around one grey-scale, and the foreground is predominantly centred around another grey-scale, so the histogram would be bimodal. This means that the anti-mode can be chosen as the threshold value.
+
+The many local maxima and minima in histograms of images make it difficult to determine the anti-mode. Smoothing the histogram, or using a variable step size can be used to make this less difficult.
+
+TODO: Explain Optimal Thresholding better
+**Optimal Thresholding** involves modelling an image's histogram as the sum of two normal but possibly overlapping distributions, picking an initial threshold value, calculating the average value of foreground and background pixels and re-computing a new threshold from those before iterating again.
+
+TODO: Write a full explanation of how Otsu Thresholding works
+**Otsu Thresholding** minimises the spread of pixel values on either side of the threshold.
+
+**Adaptive thresholding** involves separating an image up into sub-images and calculating a threshold for each of the sub-images. The threshold for each point in the image is then calculated by interpolating a threshold value from the four nearest thresholds using bilinear interpolation.
+
+Adaptive thresholding is useful when a global threshold value for the entire image will misclassify pixels as foreground and background. The below example makes this a bit more clear:  
+<img style='width:300' src="/assets/images/global-thresholding.png"></img>
+
+OpenCV's' adaptive thresholding algorithm works like how one might initially imaging adaptive threshold would work where a new threshold is being computed for every pixel based on the average of a local region around it.
+
+**Band Thresholding** uses two thresholds, above and below object pixel values. This leads to the pixels just in between background and foreground having a value of 1.
+
+**Semi-Thresholding** sets background pixels to black and leaves object pixels with their original grayscale value.
+
+### Mathematical Morphology
+
+TODO: Define Mathematical Morphology in relation to image processing.
+
+TODO: Describe the methods of Mathematical Morphology better
+
+**Dilation** is a technique for expanding the number of object pixels, typically in all directions simultaneously. It works by translating object points outward from the origin of their object within an image.
+
+**Erosion** is a technique for shrinking object shapes by removing pixels from the boundary.
+
+An **Opening** is an erosion operation followed by a dilation operation with the same structuring element
+
+A **Closing** is a dilation operation followed by an erosion operation, again with the same structuring element.
+
+In many applications it is common to see a closing followed by an opening to clean up binary image data. The benefits of this can be seen in the below example:  
+<img style='width:300' src="/assets/images/opening-then-closing.png"></img>

@@ -72,3 +72,9 @@ This code performs Gaussian smoothing on an image:
 ```c++
 GaussianBlur(image,smoothed_image,Size(5,5),1.5);
 ```
+
+This code performs a binary threshold on an image:
+```c++
+threshold(gray_image,binary_image,threshold,
+                               255,THRESH_BINARY);
+```
