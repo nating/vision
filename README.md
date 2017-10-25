@@ -1,5 +1,5 @@
 # Computer Vision
-A repository for Computer Vision projects written in OpenCV.
+If you came here looking for resources for CS4053, you just missed them. You can request access to a different repository with some available [here](https://github.com/nating/cs4053) if you want.
 
 ## How to Set up your OpenCV environment on Mac
 
